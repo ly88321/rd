@@ -1,11 +1,11 @@
 [package]
-name = "rustdesk"
+name = "dmdesk"
 version = "1.3.6"
-authors = ["rustdesk <info@rustdesk.com>"]
+authors = ["dmdesk <dm@xxun.cc>"]
 edition = "2021"
 build= "build.rs"
-description = "RustDesk Remote Desktop"
-default-run = "rustdesk"
+description = "dmDesk Remote Desktop"
+default-run = "dmdesk"
 rust-version = "1.75"
 
 [lib]
