@@ -256,7 +256,7 @@ class ScamWarningDialog extends StatefulWidget {
 }
 
 class ScamWarningDialogState extends State<ScamWarningDialog> {
-  int _countdown = bind.isCustomClient() ? 0 : 12;
+  int _countdown = bind.isCustomClient() ? 0 : 1;
   bool show_warning = false;
   late Timer _timer;
   late ServerModel _serverModel;
@@ -287,13 +287,9 @@ class ScamWarningDialogState extends State<ScamWarningDialog> {
   }
 
   @override
-  bool shouldShowDialog = false;
   Widget build(BuildContext context) {
     final isButtonLocked = _countdown > 0;
 
-  if (!shouldShowDialog) {
-    return Container(); 
-  }
     return AlertDialog(
       content: ClipRRect(
         borderRadius: BorderRadius.circular(20.0),
@@ -322,7 +318,7 @@ class ScamWarningDialogState extends State<ScamWarningDialog> {
                     ),
                     SizedBox(width: 10),
                     Text(
-                      translate("Warning"),
+                      translate(""),
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -334,13 +330,13 @@ class ScamWarningDialogState extends State<ScamWarningDialog> {
                 SizedBox(height: 20),
                 Center(
                   child: Image.asset(
-                    'assets/scam.png',
+                    '',
                     width: 180,
                   ),
                 ),
                 SizedBox(height: 18),
                 Text(
-                  translate("scam_title"),
+                  translate(""),
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
@@ -350,7 +346,7 @@ class ScamWarningDialogState extends State<ScamWarningDialog> {
                 ),
                 SizedBox(height: 18),
                 Text(
-                  "${translate("scam_text1")}\n\n${translate("scam_text2")}\n",
+                  "${translate("")}\n\n${translate("")}\n",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
