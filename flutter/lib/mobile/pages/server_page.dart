@@ -287,9 +287,13 @@ class ScamWarningDialogState extends State<ScamWarningDialog> {
   }
 
   @override
+  bool shouldShowDialog = false;
   Widget build(BuildContext context) {
     final isButtonLocked = _countdown > 0;
 
+  if (!shouldShowDialog) {
+    return Container(); 
+  }
     return AlertDialog(
       content: ClipRRect(
         borderRadius: BorderRadius.circular(20.0),
